@@ -1,0 +1,152 @@
+Last login: Mon Feb  8 11:38:17 on console
+Davids-MacBook-Pro:~ davidsantos$ cd Documents/Dev/
+Davids-MacBook-Pro:Dev davidsantos$ ls
+Ironhack	Projects	Resources
+Davids-MacBook-Pro:Dev davidsantos$ cd Ironhack/
+Davids-MacBook-Pro:Ironhack davidsantos$ ls
+Exercises
+Davids-MacBook-Pro:Ironhack davidsantos$ cd Exercises/
+Davids-MacBook-Pro:Exercises davidsantos$ ls
+second.txt
+Davids-MacBook-Pro:Exercises davidsantos$ rm second.txt 
+Davids-MacBook-Pro:Exercises davidsantos$ ls
+Davids-MacBook-Pro:Exercises davidsantos$ mkdir gittest
+Davids-MacBook-Pro:Exercises davidsantos$ ls
+gittest
+Davids-MacBook-Pro:Exercises davidsantos$ cd gittest/
+Davids-MacBook-Pro:gittest davidsantos$ cd ..
+Davids-MacBook-Pro:Exercises davidsantos$ move gittest/ git-practise/
+-bash: move: command not found
+Davids-MacBook-Pro:Exercises davidsantos$ rename  gittest git-practise
+-bash: rename: command not found
+Davids-MacBook-Pro:Exercises davidsantos$ mv gittest/ git-practise/
+Davids-MacBook-Pro:Exercises davidsantos$ ls
+git-practise
+Davids-MacBook-Pro:Exercises davidsantos$ cd git-practise/
+Davids-MacBook-Pro:git-practise davidsantos$ git init
+Initialized empty Git repository in /Users/davidsantos/Documents/Dev/Ironhack/Exercises/git-practise/.git/
+Davids-MacBook-Pro:git-practise davidsantos$ touch three_doors.txt
+Davids-MacBook-Pro:git-practise davidsantos$ open three_doors.txt 
+Davids-MacBook-Pro:git-practise davidsantos$ git commit -m "First commit"
+On branch master
+
+Initial commit
+
+Untracked files:
+	three_doors.txt
+
+nothing added to commit but untracked files present
+Davids-MacBook-Pro:git-practise davidsantos$ git add three_doors.txt 
+Davids-MacBook-Pro:git-practise davidsantos$ git commit -m "First commit"
+[master (root-commit) bdecc82] First commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 three_doors.txt
+Davids-MacBook-Pro:git-practise davidsantos$ git status
+On branch master
+nothing to commit, working directory clean
+Davids-MacBook-Pro:git-practise davidsantos$ nano three_doors.txt 
+Davids-MacBook-Pro:git-practise davidsantos$ open three_doors.txt 
+Davids-MacBook-Pro:git-practise davidsantos$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   three_doors.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Davids-MacBook-Pro:git-practise davidsantos$ git add three_doors.txt 
+Davids-MacBook-Pro:git-practise davidsantos$ git commit -m "Add a question"
+[master 2486459] Add a question
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Davids-MacBook-Pro:git-practise davidsantos$ nano three_doors.txt 
+Davids-MacBook-Pro:git-practise davidsantos$ git diff three_doors.txt 
+diff --git a/three_doors.txt b/three_doors.txt
+index fb76a57..f8a6f51 100644
+--- a/three_doors.txt
++++ b/three_doors.txt
+@@ -1,2 +1,3 @@
+ You are in a room with three doors.
+ Which door will you go through?
++I choose the left one.
+Davids-MacBook-Pro:git-practise davidsantos$ nano first_choice.txt
+Davids-MacBook-Pro:git-practise davidsantos$ ls
+first_choice.txt	three_doors.txt
+Davids-MacBook-Pro:git-practise davidsantos$ ls
+first_choice.txt	three_doors.txt
+Davids-MacBook-Pro:git-practise davidsantos$ open three_doors.txt 
+Davids-MacBook-Pro:git-practise davidsantos$ git checkout three_doors.txt 
+Davids-MacBook-Pro:git-practise davidsantos$ open three_doors.txt 
+Davids-MacBook-Pro:git-practise davidsantos$ nano second_choice.txt
+Davids-MacBook-Pro:git-practise davidsantos$ git add --
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+Davids-MacBook-Pro:git-practise davidsantos$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	first_choice.txt
+	second_choice.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+Davids-MacBook-Pro:git-practise davidsantos$ git add .
+Davids-MacBook-Pro:git-practise davidsantos$ ls
+first_choice.txt	second_choice.txt	three_doors.txt
+Davids-MacBook-Pro:git-practise davidsantos$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   first_choice.txt
+	new file:   second_choice.txt
+
+Davids-MacBook-Pro:git-practise davidsantos$ git remove first_choice.txt 
+git: 'remove' is not a git command. See 'git --help'.
+
+Did you mean this?
+	remote
+Davids-MacBook-Pro:git-practise davidsantos$ git commit -m "Add first and second choice"
+[master c483744] Add first and second choice
+ 2 files changed, 2 insertions(+)
+ create mode 100644 first_choice.txt
+ create mode 100644 second_choice.txt
+Davids-MacBook-Pro:git-practise davidsantos$ nano second_choice.txt 
+Davids-MacBook-Pro:git-practise davidsantos$ git add second_choice.txt 
+Davids-MacBook-Pro:git-practise davidsantos$ git commit -m "Add what is behind tthe door in the second choice."
+[master a5dd209] Add what is behind tthe door in the second choice.
+ 1 file changed, 1 insertion(+)
+Davids-MacBook-Pro:git-practise davidsantos$ git checkout -b "new"
+Switched to a new branch 'new'
+Davids-MacBook-Pro:git-practise davidsantos$ git branch
+  master
+* new
+Davids-MacBook-Pro:git-practise davidsantos$ ls
+first_choice.txt	second_choice.txt	three_doors.txt
+Davids-MacBook-Pro:git-practise davidsantos$ nano second_choice.txt 
+Davids-MacBook-Pro:git-practise davidsantos$ git add second_choice.txt 
+Davids-MacBook-Pro:git-practise davidsantos$ git commit -m "Add an alternative for what I have found behind the second door"
+[new e50e45c] Add an alternative for what I have found behind the second door
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Davids-MacBook-Pro:git-practise davidsantos$ git merge "new"
+Already up-to-date.
+Davids-MacBook-Pro:git-practise davidsantos$ git checkout master
+Switched to branch 'master'
+Davids-MacBook-Pro:git-practise davidsantos$ nano second_choice.txt 
+Davids-MacBook-Pro:git-practise davidsantos$ git checkout new
+Switched to branch 'new'
+Davids-MacBook-Pro:git-practise davidsantos$ nano second_choice.txt 
+Davids-MacBook-Pro:git-practise davidsantos$ git status
+On branch new
+nothing to commit, working directory clean
+Davids-MacBook-Pro:git-practise davidsantos$ git merge new
+Already up-to-date.
+Davids-MacBook-Pro:git-practise davidsantos$ git checkout master
+Switched to branch 'master'
+Davids-MacBook-Pro:git-practise davidsantos$ git merge new
+Updating a5dd209..e50e45c
+Fast-forward
+ second_choice.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Davids-MacBook-Pro:git-practise davidsantos$ nano second_choice.txt 
+Davids-MacBook-Pro:git-practise davidsantos$ 
