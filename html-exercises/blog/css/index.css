@@ -1,0 +1,76 @@
+@import url(https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise|Gloria+Hallelujah);
+html, body{
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: #333;
+  font-family: 'Waiting for the Sunrise', cursive;
+  color: #00b162;
+}
+
+h1 {
+  font-size: 5em;
+}
+
+h2, h3, h4 {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  color: #00b162;
+}
+
+nav, article {
+  margin: 15px;
+}
+
+nav a{
+  text-decoration: none;
+  font-weight: 400;
+}
+.about-container {
+  margin: 10px;
+}
+
+.about-container img {
+  width: 250px;
+}
+
+.article-container {
+  background-color: #FFFFFF;
+}
+
+.post-author {
+  font-size: 20px;
+}
+
+h2{
+  font-size: 40px;
+}
+
+footer{
+  background-color: #444444;
+  padding: 30px 10px;
+  border-top: 5px solid white;
+  color: white;
+  font-size: 10px;
+  font-style: italic;
+  width: 100%;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer li a {
+  padding: 14px 16px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
