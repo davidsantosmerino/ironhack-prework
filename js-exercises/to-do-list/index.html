@@ -1,0 +1,36 @@
+<DOCTYPE html>
+<html>
+  <head>
+    <title>To-Do List</title>
+    <meta charset="utf-8"/>
+    <!-- load jquery just to support toastr notifications -->
+     <script defer type="text/javascript" src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script defer type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/todo.css">
+    <script defer type="text/javascript" src="js/todo.js"></script>
+  </head>
+  <body>
+    <h1>What are you going to do today?</h1>
+    <div class="form">
+        <input type="text" id="todo-input" placeholder="What needs to be done?"></input>
+        <input type="submit" id="save-button" value="Save"></input>
+    </div>
+    <div class="todo-list"> 
+      <h2>To Do</h2>
+      <ul class="todo-list-items">
+        <button id="done-button">Done</button>
+        <li> Finish this exercise </li>
+        <li> Give myself a high five!</li>
+        <!-- the addToDoItem function should add a new list item here -->
+      </ul>
+    </div>
+    <div class="done-list">
+      <h2>Done!</h2>
+      <ul class="done-list-items">
+        <li class="done">Read the chapter on DOM manipulation</li>
+        <!-- the markAsDone function should add a new list item here -->
+      </ul>
+    </div>
+  </body>
+</html>
